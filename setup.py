@@ -2,7 +2,7 @@ import pathlib
 from setuptools import find_packages, setup
 
 BASE_DIR = pathlib.Path(__file__).parent
-README = (BASE_DIR / 'README').read_text()
+README = (BASE_DIR / 'README.md').read_text()
 
 setup(
     name="dostuff",
