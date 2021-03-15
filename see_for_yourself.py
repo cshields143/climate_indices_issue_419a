@@ -1,9 +1,14 @@
 import numpy as np
-from dostuff.code import doAThing
+import scipy.stats
 
-values, skew, loc, scale = \
-    (np.loadtxt(f"tests/fixture/{n}") for n in \
-    ('values', 'skew', 'loc', 'scale'))
+values = np.loadtxt('values')
+skew = np.loadtxt('skew')
+loc = np.loadtxt('loc')
+scale = np.loadtxt('scale')
+out = np.loadtxt('out')
 
-result = doAThing(values, skew, loc, scale)
-print(np.count_nonzero(result == 0))
+result = scipy.stats.pearson3.cdf(values, skew, loc, scale)
+calculated = np.count_nonzero(result == 0)
+actual = np.count_nonzero(out == 0)
+
+assert calculated == actual
