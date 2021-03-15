@@ -6,19 +6,19 @@ To verify this for yourself, do the following:
 
 1. Create Anaconda environments for 3.6 and 3.7:
 
-    conda create -n test36 python=3.6
-    conda create -n test37 python=3.7
+        conda create -n test36 python=3.6
+        conda create -n test37 python=3.7
 
 2. For both of these environments, initialize them like so:
 
-    conda activate <test36 or test37>
-    pip install -r requirements.txt
-    python setup.py install
-    pip install tox
+        conda activate <test36 or test37>
+        pip install -r requirements.txt
+        python setup.py install
+        pip install tox
 
 3. Run the tox test "suite" in each environment:
 
-    tox -e <py36 or py37, depending on which env you're in>
+        tox -e <py36 or py37, depending on which env you're in>
 
 When using `test36`, you should get no errors.
 
