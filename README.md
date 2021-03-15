@@ -28,6 +28,8 @@ This is not due to tox/pytest; running `python see_for_yourself.py`
 from project root will print 0 (the desired number) in `test36`,
 but 20 in `test37`
 
+A *much* simpler version of all this code is available in the `simpler` branch.
+
 # Wait, what are we testing again?
 
 This code was created from the `_pearson_fit` function in the
